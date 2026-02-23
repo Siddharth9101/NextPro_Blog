@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
                 port: ""
             },
             {
-                hostname: "https://quixotic-sockeye-798.convex.cloud",
+                hostname: "quixotic-sockeye-798.convex.cloud",
                 protocol: "https",
                 port: ""
             },
