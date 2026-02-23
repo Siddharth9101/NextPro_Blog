@@ -23,9 +23,9 @@ export default function BlogPost(){
             <p className="p-4 max-w-2xl mx-auto text-xl text-muted-foreground">Insights, thoughts, and trends from our team.</p>
         </div>
 
-        {/*<Suspense fallback={<SkeletonLoadingUI />}>*/}
+        <Suspense fallback={<SkeletonLoadingUI />}>
             <LoadBlogPosts />
-        {/*</Suspense>*/}
+        </Suspense>
 
     </div>
 }
@@ -60,19 +60,19 @@ async function LoadBlogPosts() {
     )
 }
 
-// function SkeletonLoadingUI(){
-//             return (
-//                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-//                     {[...Array(3)].map((_,i) => (
-//                             <div key={i} className="flex flex-col space-y-3">
-//                                 <Skeleton className="w-full h-48 rounded-xl" />
-//                                 <div className="flex flex-col space-y-2">
-//                                     <Skeleton className="h-3 w-3/4" />
-//                                     <Skeleton className="h-4 w-full" />
-//                                     <Skeleton className="h-4 w-2/4" />
-//                                 </div>
-//                             </div>
-//                     ))}
-//                 </div>
-//             )
-// }
+function SkeletonLoadingUI(){
+            return (
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {[...Array(3)].map((_,i) => (
+                            <div key={i} className="flex flex-col space-y-3">
+                                <Skeleton className="w-full h-48 rounded-xl" />
+                                <div className="flex flex-col space-y-2">
+                                    <Skeleton className="h-3 w-3/4" />
+                                    <Skeleton className="h-4 w-full" />
+                                    <Skeleton className="h-4 w-2/4" />
+                                </div>
+                            </div>
+                    ))}
+                </div>
+            )
+}
