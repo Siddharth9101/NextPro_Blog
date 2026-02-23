@@ -31,9 +31,10 @@ export default function BlogPost(){
 }
 // 7:56
 async function LoadBlogPosts() {
-    "use cache";
-    cacheLife("hours");
-    cacheTag("blogs")
+    // "use cache";
+    // cacheLife("hours");
+    // cacheTag("blogs")
+    await connection();
     const posts = await fetchQuery(api.posts.getPosts);
 
     return (
